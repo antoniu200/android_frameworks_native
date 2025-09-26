@@ -83,8 +83,11 @@ public:
      *
      * the controlledByApp flag indicates that this Surface (producer) is
      * controlled by the application. This flag is used at connect time.
-     *
-     * Pass in the SurfaceControlHandle to store a weak reference to the layer
+     */
+    explicit Surface(const sp<IGraphicBufferProducer>& bufferProducer,
+            bool controlledByApp);
+     /*
+     * Optionally pass in the SurfaceControlHandle to store a weak reference to the layer
      * that the Surface was created from. This handle can be used to create a
      * child surface without using the IGBP to identify the layer. This is used
      * for surfaces created by the BlastBufferQueue whose IGBP is created on the
