@@ -85,7 +85,7 @@ public:
      * controlled by the application. This flag is used at connect time.
      */
     explicit Surface(const sp<IGraphicBufferProducer>& bufferProducer,
-            bool controlledByApp);
+            bool controlledByApp = false);
      /*
      * Optionally pass in the SurfaceControlHandle to store a weak reference to the layer
      * that the Surface was created from. This handle can be used to create a
@@ -93,8 +93,8 @@ public:
      * for surfaces created by the BlastBufferQueue whose IGBP is created on the
      * client and cannot be verified in SF.
      */
-    explicit Surface(const sp<IGraphicBufferProducer>& bufferProducer, bool controlledByApp = false,
-                     const sp<IBinder>& surfaceControlHandle = nullptr);
+    explicit Surface(const sp<IGraphicBufferProducer>& bufferProducer, bool controlledByApp,
+                     const sp<IBinder>& surfaceControlHandle);
 
     /* getIGraphicBufferProducer() returns the IGraphicBufferProducer this
      * Surface was created with. Usually it's an error to use the
