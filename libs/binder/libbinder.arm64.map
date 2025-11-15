@@ -869,7 +869,7 @@ LIBBINDER {
     _ZNK7android6Parcel10ipcObjectsEv;
     _ZNK7android6Parcel10readDoubleEPd;
     _ZNK7android6Parcel10readDoubleEv;
-    _ZNK7android6Parcel10readIntPtrEPi;
+    _ZNK7android6Parcel10readIntPtrEPl;
     _ZNK7android6Parcel10readIntPtrEv;
     _ZNK7android6Parcel10readObjectEb;
     _ZNK7android6Parcel10readUint32EPj;
